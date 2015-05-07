@@ -2,11 +2,9 @@
 #import <CoreMotion/CoreMotion.h>
 #import <UIKit/UIKit.h>
 
-@interface bridge : NSObject {
+@interface bridge : NSObject, UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     NSOperationQueue *queue;
 }
-
-@interface APPViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) CMMotionManager *motionManager;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
